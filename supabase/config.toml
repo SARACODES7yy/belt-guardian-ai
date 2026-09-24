@@ -1,0 +1,10 @@
+project_id = "dqvefnjotpljxnxbxkqq"
+
+[functions.analyze-machine-data]
+verify_jwt = false
+
+[functions.diagnose-belt]
+verify_jwt = false
+
+[functions.check-thresholds]
+verify_jwt = false
