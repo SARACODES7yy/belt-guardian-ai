@@ -40,12 +40,11 @@ Never invent machines or metrics that are not in the context.`;
       );
     }
     if (GROQ_API_KEY) {
-      attemptList.push({
-        name: "groq",
-        url: "https://api.groq.com/openai/v1/chat/completions",
-        key: GROQ_API_KEY,
-        model: "llama-3.3-70b-versatile",
-      });
+      const url = "https://api.groq.com/openai/v1/chat/completions";
+      attemptList.push(
+        { name: "groq", url, key: GROQ_API_KEY, model: "openai/gpt-oss-120b" },
+        { name: "groq", url, key: GROQ_API_KEY, model: "openai/gpt-oss-20b" },
+      );
     }
 
     const requestBody = (model: string) => JSON.stringify({

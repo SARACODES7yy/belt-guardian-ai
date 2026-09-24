@@ -71,12 +71,11 @@ serve(async (req) => {
       );
     }
     if (GROQ_API_KEY) {
-      attempts.push({
-        name: "groq",
-        url: "https://api.groq.com/openai/v1/chat/completions",
-        key: GROQ_API_KEY,
-        model: "llama-3.3-70b-versatile",
-      });
+      const url = "https://api.groq.com/openai/v1/chat/completions";
+      attempts.push(
+        { name: "groq", url, key: GROQ_API_KEY, model: "openai/gpt-oss-120b" },
+        { name: "groq", url, key: GROQ_API_KEY, model: "openai/gpt-oss-20b" },
+      );
     }
     if (attempts.length === 0) {
       throw new Error("No AI provider configured. Set GEMINI_API_KEY or GROQ_API_KEY as a Supabase secret.");

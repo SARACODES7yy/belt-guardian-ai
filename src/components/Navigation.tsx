@@ -1,8 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, LineChart, FileText, Upload, History, ClipboardList, LogOut, Activity, Wrench } from "lucide-react";
+import { LayoutDashboard, LineChart, FileText, Upload, History, ClipboardList, LogOut, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Logo } from "@/components/Logo";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -22,8 +23,8 @@ export const Navigation = () => {
     <nav className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <div className="mx-auto flex h-14 max-w-[1400px] items-center gap-4 px-4 md:px-6">
         <Link to="/" className="flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-[6px] border border-primary/50 bg-secondary text-primary">
-            <Activity className="h-4 w-4" />
+          <span className="flex h-8 w-8 items-center justify-center">
+            <Logo className="h-7 w-7" />
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-display text-lg font-bold uppercase tracking-[0.1em] text-foreground">

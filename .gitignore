@@ -32,3 +32,4 @@ belt-guardian-ai-main/
 *.sln
 *.sw?
 .zcode/
+*.tsbuildinfo
