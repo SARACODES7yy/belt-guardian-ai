@@ -33,3 +33,5 @@ belt-guardian-ai-main/
 *.sw?
 .zcode/
 *.tsbuildinfo
+
+.vercel
